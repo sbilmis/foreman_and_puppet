@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1 TRUBA’da VNC ile kullanıcı arayüzlerine görsel bağlantı &mdash; test 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            test
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">1 <strong>TRUBA’da VNC ile kullanıcı arayüzlerine görsel bağlantı</strong></a><ul>
+<li><a class="reference internal" href="#ek-notlar">1.1 Ek Notlar:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">test</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1 <strong>TRUBA’da VNC ile kullanıcı arayüzlerine görsel bağlantı</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/vnc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">Author<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sbilmis</p>
+</dd>
+</dl>
+</div></blockquote>
+<nav class="contents" id="contents" role="doc-toc">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#truba-da-vnc-ile-kullanici-arayuzlerine-gorsel-baglanti" id="id1">1 <strong>TRUBA’da VNC ile kullanıcı arayüzlerine görsel bağlantı</strong></a></p>
+<ul>
+<li><p><a class="reference internal" href="#ek-notlar" id="id2">1.1 Ek Notlar:</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="truba-da-vnc-ile-kullanici-arayuzlerine-gorsel-baglanti">
+<span id="trubada-vnc-ile-kullanici-arayuzlerine-gorsel-baglanti"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">1 <strong>TRUBA’da VNC ile kullanıcı arayüzlerine görsel bağlantı</strong></a><a class="headerlink" href="#truba-da-vnc-ile-kullanici-arayuzlerine-gorsel-baglanti" title="Link to this heading"></a></h1>
+<p>Kullanıcı arayüzü sunucularında (sardalya1 ve barbun1) vncserver kuruludur. Kullanıcılar aşağıdaki ayarları gerçekleştirdikten sonra kişisel bilgisayarlarında vncviewer kullanarak grafik arayüzü gerektiren programları  (MATLAB vb.) çalıştırabilir.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>levrek1 sunucusunda vncserver kurulu değildir.</p>
+</div>
+<ul class="simple">
+<li><p>Öncelikle (SSH kullanılarak) arayüz makinesine bağlanılırak  kullanıcı hesabınızda bir VNC oturumu oluşturulur. Bu aşamada bir VNC parolasınının da belirlenmesi de gerekecektir.</p></li>
+</ul>
+<p>Aşağıdaki örnek kampüs dışından bağlantı gerçekleştirdirildiği varsayılarak barbun1 sunucusu için yazılmıştır. Sunuculara nasıl bağlanılacağı hakkında <a class="reference external" href="https://docs.truba.gov.tr/TRUBA/kullanici-el-kitabi/open-vpn/openvpn_info.html">buradan</a> bilgi edinebilirsiniz.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## barbun1 arayüz makinesine baglanmak için</span>
+<span class="n">ssh</span> <span class="n">username</span><span class="o">@</span><span class="mf">172.16.11.1</span>
+<span class="n">vncpasswd</span>
+<span class="c1">## (olusturacaginiz sifre TRUBA&#39;ya bağlandığınız şifreden farklı olabilir)</span>
+<span class="c1">## &quot;view only password&quot; seçeneği sorulduğunda &quot;no&quot; seçeneği ile devam ediniz.</span>
+</pre></div>
+</div>
+<img alt="vnc1.png" src="vnc1.png" />
+<p>Parola oluşturulduktan sonra bir vnc oturumunun başlatılması gerekir.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## belirli bir ekran boyutuyla vnc oturumunu başlatın</span>
+<span class="n">vncserver</span> <span class="o">-</span><span class="n">geometry</span> <span class="mi">1440</span><span class="n">x900</span>
+</pre></div>
+</div>
+<img alt="vnc2.png" src="vnc2.png" />
+<p>Mevcut vnc oturumlarını listelemek ve <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">DISPLAY</span></code> numarasını görmek için</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## mevcut vncserver oturumlarını görmek için</span>
+<span class="n">vncserver</span> <span class="o">-</span><span class="nb">list</span>
+</pre></div>
+</div>
+<img alt="vnc3.png" src="vnc3.png" />
+<p>Bu aşamadan sonra, <strong>kişisel bilgisayarınızdaki herhangi bir VNC istemcisini kullanarak</strong>, (örneğin <a class="reference external" href="https://tigervnc.org/">tigerVNC</a>  ya da <a class="reference external" href="https://sourceforge.net/projects/turbovnc/">turboVNC</a> yazılımları) oturum oluşturduğunuz kullanıcı arayüzü sunucusuna belirlemiş olduğunuz şifreyle görsel bağlantı gerçekleştirebilirsiniz.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VNC bağlantısı yaparken IP adresinin sonuna getirilecek “X DISPLAY” numarası buradaki örnekten farklılık gösterebilir.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## terminal komutu ile (kendi bilgisayaranizdan)</span>
+<span class="n">vncviewer</span> <span class="mf">172.16.11.1</span><span class="p">:</span><span class="mi">3</span>
+<span class="c1">## bu aşamada oluşturmuş olduğunuz vnc şifresini girip masaüstüne erişim sağlayabilirsiniz.</span>
+</pre></div>
+</div>
+<img alt="vnc3_5.png" src="vnc3_5.png" />
+<p><strong>tiger vnc-viewer</strong> kullanıyorsanız eğer aşağıdaki gibi vnc sunucu bilgi kısmına IP numarası ve XDisplay numarasını yazarak da bağlanabilirsiniz.</p>
+<img alt="vnc4.png" src="vnc4.png" />
+<p><strong>turbovnc</strong> kullanıyorsanız eğer aşağıdaki gibi vnc sunucu bilgi kısmına IP numarası ve XDisplay numarasını yazarak da bağlanabilirsiniz.</p>
+<img alt="vnc6.png" src="vnc6.png" />
+<section id="ek-notlar">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">1.1 Ek Notlar:</a><a class="headerlink" href="#ek-notlar" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Hangi sunucuda VNC oturumu oluşturduysanız (barbun1 ya da sardalya1) sadece o sunucuya VNC ile bağlanabilirsiniz.</p></li>
+<li><p>VNC oturumu oluşturulduktan sonra, aynı oturum tekrar tekrar kullanılabilir. Her seferinde yeni parola ya da yeni oturum oluşturmaya gerek yoktur.</p></li>
+<li><p>VNC bağlantısında sorun yaşandığında önceki oturumlarınızı silerek yeni bir oturum oluşturmayı deneyebilirsiniz.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## vnc-server oluşturmuş olduğunuz sunucuya baglanin (örnegin barbun1)</span>
+  <span class="n">ssh</span> <span class="n">username</span><span class="o">@</span><span class="mf">172.16.11.1</span>
+
+<span class="c1">## Mevcut VNC oturumlarını listeleyin</span>
+  <span class="n">vncserver</span> <span class="o">-</span><span class="nb">list</span>
+
+<span class="c1">## Mevcut vnc oturumunu sonlandırin (X-DISPLAY numaranız farklı olabilir)\\</span>
+  <span class="n">vncserver</span> <span class="o">-</span><span class="n">kill</span> <span class="p">:</span><span class="mi">3</span>
+</pre></div>
+</div>
+<img alt="vnc5.png" src="vnc5.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>VNC bilgileri ve logları ev dizininde <code class="docutils literal notranslate"><span class="pre">.vnc</span></code> dizininde tutulmaktadır. Herhangi bir sorunda bu dizini silip yeniden oluşturabilirsiniz.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">~/.</span><span class="n">vnc</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, sbilmis.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
